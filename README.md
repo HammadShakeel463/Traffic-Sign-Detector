@@ -1,12 +1,10 @@
 # Traffic-Sign-Detector
-The goal of building a CNN-based traffic sign classification system is to improve road safety by increasing the accuracy and reliability of traffic sign recognition. Doing so will help in reducing the chance of accidents caused by human error.
+This project focuses on classifying images of traffic signs using convolutional neural network (CNN) and ResNet models trained on the German Traffic Sign Benchmark dataset. The dataset comprises over 50,000 images categorized into more than 40 classes of traffic signs.
 
-The developed web application provides a user-friendly interface, enabling drivers and traffic authorities to classify traffic signs easily. Real-time feedback enhances decision-making and road safety. This project's outcomes have implications for advanced driver assistance systems, autonomous vehicles, and traffic management, improving performance and safety.
+The motivation behind the project lies in the importance of accurate traffic sign classification for road safety. Traditional methods often struggle with real-world variations, prompting the use of deep learning models like CNNs and ResNets to automatically learn and extract features from images.
 
-#Processing
+The methodology involves preprocessing the images by resizing them to uniform dimensions and converting them into numerical representations. For the CNN model, a pre-trained sequential model was fine-tuned with additional layers, batch normalization, and dropout to improve accuracy to 97%. For the ResNet model, a pre-trained ResNet50 architecture was fine-tuned, leading to a testing accuracy of 99.26%.
 
-A 600mb dataset of more than 50000 images was present. THe images undergo resizing to achieve uniform dimensions,50503 to be exact, facilitating effective model training.
+Training was conducted on the Google Colab GPU runtime with a 75:25 testing to validation split, 20 epochs, a batch size of 32, and a learning rate of 0.001.
 
-Fine-tune the model by using different kernel sizes and no of filters at each convolution and added some additional layers and batch normalization as well.After every two convolutional layers Max pooling was applied with a stride of 2. Dropouts were used to cater the overfitting problem and ReLu activation function was used to address the vanishing gradients .We then re-trained the model and managed to improve the testing accuracy to 97%.
-
-Trained the new model over the Train folder in the dataset that had 38000+ images with 2.5Million parameters by using the Gpu runtime on Google colab.We had a 75:25 testing to validation split and we ran 20 epochs with the batch size set to 32 which meant that each epoch contained over 981 samples and the learning rate was set to 0.001.We achieved amost 98 percent validation and testing accuracy
+The project aims to contribute to improving road safety by providing insights into the performance of CNN and ResNet models for traffic sign classification. The results demonstrate high accuracy and robustness, supporting the project's goal of enhancing traffic sign recognition systems to mitigate accidents caused by human error.
